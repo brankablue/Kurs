@@ -29,10 +29,10 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3ka-x7-5pw" id="21u-oK-fN9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-aW-3xc">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fiQ-aW-3xc">
                                                     <rect key="frame" x="8" y="5" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="ASZ-Qm-mPd"/>
@@ -91,11 +91,53 @@
                     <navigationItem key="navigationItem" title="Vesti" id="fy3-z3-nq2"/>
                     <connections>
                         <outlet property="tableView" destination="fFx-w6-Vkn" id="UD8-8S-83o"/>
+                        <segue destination="N00-cn-tVB" kind="show" id="PYJ-Bf-btp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="-116.49175412293854"/>
+            <point key="canvasLocation" x="884" y="-646"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="fIa-oQ-2N3">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N00-cn-tVB" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xHj-Ym-kNW"/>
+                        <viewControllerLayoutGuide type="bottom" id="pON-Ll-2Ig"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ej-iC-rky">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbR-gz-8eR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="N00-cn-tVB" id="ATY-bs-Bbn"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-AP-jAX">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jXX-AP-jAX" firstAttribute="centerX" secondItem="8Ej-iC-rky" secondAttribute="centerX" id="L4j-B3-Upu"/>
+                            <constraint firstItem="VbR-gz-8eR" firstAttribute="top" secondItem="8Ej-iC-rky" secondAttribute="top" id="aAZ-po-QmX"/>
+                            <constraint firstAttribute="trailing" secondItem="VbR-gz-8eR" secondAttribute="trailing" id="gzc-2e-ReO"/>
+                            <constraint firstItem="jXX-AP-jAX" firstAttribute="centerY" secondItem="8Ej-iC-rky" secondAttribute="centerY" id="lOd-Zg-ldj"/>
+                            <constraint firstItem="VbR-gz-8eR" firstAttribute="leading" secondItem="8Ej-iC-rky" secondAttribute="leading" id="lw2-VA-UPA"/>
+                            <constraint firstItem="pON-Ll-2Ig" firstAttribute="top" secondItem="VbR-gz-8eR" secondAttribute="bottom" id="zsb-EV-GqW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="VbR-gz-8eR" id="VUl-IG-vR6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z50-IW-XuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1572" y="-646.32683658170924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QD9-eJ-ZLz">

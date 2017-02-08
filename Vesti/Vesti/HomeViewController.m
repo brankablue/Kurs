@@ -9,10 +9,11 @@
 #import "HomeViewController.h"
 #import "Article.h"
 #import "ArticleTableViewCell.h"
+#import "WebViewController.h"
 
 //#define URL @"http://www.brzevesti.net/api/news"
 static NSString *const URL = @"http://www.brzevesti.net/api/news";
-
+static NSString *const STORYBOARD = @"Main";
 @interface HomeViewController() <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic)NSMutableArray *itemsArray;
@@ -78,6 +79,14 @@ static NSString *const URL = @"http://www.brzevesti.net/api/news";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // Show WebViewController
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:STORYBOARD bundle:nil];
+    WebViewController *toViewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([WebViewController class])];
+    
+    Article *article = self.itemsArray[indexPath.row];
+    toViewController.url = article.url;
+    [self.navigationController pushViewController:toViewController animated:YES];
 }
 
 @end

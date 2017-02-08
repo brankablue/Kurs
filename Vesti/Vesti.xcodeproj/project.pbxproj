@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50D30E01E4B8927001E1B48 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50D30DF1E4B8927001E1B48 /* WebViewController.m */; };
 		C560834D1E4506360012C176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C560834C1E4506360012C176 /* main.m */; };
 		C56083501E4506360012C176 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C560834F1E4506360012C176 /* AppDelegate.m */; };
 		C56083531E4506360012C176 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56083521E4506360012C176 /* HomeViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C50D30DE1E4B8927001E1B48 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C50D30DF1E4B8927001E1B48 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C56083481E4506360012C176 /* Vesti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vesti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560834C1E4506360012C176 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C560834E1E4506360012C176 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				C56083521E4506360012C176 /* HomeViewController.m */,
 				C56083651E45C8A10012C176 /* ArticleTableViewCell.h */,
 				C56083661E45C8A10012C176 /* ArticleTableViewCell.m */,
+				C50D30DE1E4B8927001E1B48 /* WebViewController.h */,
+				C50D30DF1E4B8927001E1B48 /* WebViewController.m */,
 				C56083681E45E1120012C176 /* UIImageView+Utilities.h */,
 				C56083691E45E1120012C176 /* UIImageView+Utilities.m */,
 				C56083621E4511FC0012C176 /* Article.h */,
@@ -166,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C56083641E4511FC0012C176 /* Article.m in Sources */,
+				C50D30E01E4B8927001E1B48 /* WebViewController.m in Sources */,
 				C560836A1E45E1120012C176 /* UIImageView+Utilities.m in Sources */,
 				C56083531E4506360012C176 /* HomeViewController.m in Sources */,
 				C56083501E4506360012C176 /* AppDelegate.m in Sources */,
@@ -327,6 +333,7 @@
 				C56083611E4506360012C176 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
