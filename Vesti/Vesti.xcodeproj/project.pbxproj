@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C50D30E01E4B8927001E1B48 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50D30DF1E4B8927001E1B48 /* WebViewController.m */; };
+		C50DC3C01E4E2C080049FCA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3BF1E4E2C080049FCA6 /* Reachability.m */; };
+		C50DC3C31E4E2C420049FCA6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3C21E4E2C420049FCA6 /* SystemConfiguration.framework */; };
 		C560834D1E4506360012C176 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C560834C1E4506360012C176 /* main.m */; };
 		C56083501E4506360012C176 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C560834F1E4506360012C176 /* AppDelegate.m */; };
 		C56083531E4506360012C176 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56083521E4506360012C176 /* HomeViewController.m */; };
@@ -22,6 +24,9 @@
 /* Begin PBXFileReference section */
 		C50D30DE1E4B8927001E1B48 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		C50D30DF1E4B8927001E1B48 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		C50DC3BE1E4E2C080049FCA6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C50DC3BF1E4E2C080049FCA6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C50DC3C21E4E2C420049FCA6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C56083481E4506360012C176 /* Vesti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vesti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560834C1E4506360012C176 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C560834E1E4506360012C176 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -45,16 +50,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3C31E4E2C420049FCA6 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50DC3BD1E4E2C080049FCA6 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C50DC3BE1E4E2C080049FCA6 /* Reachability.h */,
+				C50DC3BF1E4E2C080049FCA6 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		C50DC3C11E4E2C420049FCA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C50DC3C21E4E2C420049FCA6 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C560833F1E4506360012C176 = {
 			isa = PBXGroup;
 			children = (
 				C560834A1E4506360012C176 /* Vesti */,
+				C50DC3C11E4E2C420049FCA6 /* Frameworks */,
 				C56083491E4506360012C176 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +94,7 @@
 		C560834A1E4506360012C176 /* Vesti */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3BD1E4E2C080049FCA6 /* Reachability */,
 				C560834E1E4506360012C176 /* AppDelegate.h */,
 				C560834F1E4506360012C176 /* AppDelegate.m */,
 				C56083511E4506360012C176 /* HomeViewController.h */,
@@ -172,6 +197,7 @@
 			files = (
 				C56083641E4511FC0012C176 /* Article.m in Sources */,
 				C50D30E01E4B8927001E1B48 /* WebViewController.m in Sources */,
+				C50DC3C01E4E2C080049FCA6 /* Reachability.m in Sources */,
 				C560836A1E45E1120012C176 /* UIImageView+Utilities.m in Sources */,
 				C56083531E4506360012C176 /* HomeViewController.m in Sources */,
 				C56083501E4506360012C176 /* AppDelegate.m in Sources */,
