@@ -17,6 +17,7 @@
 		C445CC8C1E01BDD7005A0825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8B1E01BDD7005A0825 /* Assets.xcassets */; };
 		C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */; };
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
+		C50DC3D41E5E1E0E0049FCA6 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		C445CC901E01BDD7005A0825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C445CC961E01CA84005A0825 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		C445CC971E01CA84005A0825 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C50DC3D21E5E1E0E0049FCA6 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 			children = (
 				9F1E54C21E4F0FC300F18320 /* HomeViewController.h */,
 				9F1E54C31E4F0FC300F18320 /* HomeViewController.m */,
+				C50DC3D21E5E1E0E0049FCA6 /* TaskViewController.h */,
+				C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */,
 				C445CC961E01CA84005A0825 /* LoginViewController.h */,
 				C445CC971E01CA84005A0825 /* LoginViewController.m */,
 				9FCE43731E16D12B0021BF9B /* SignUpViewController.h */,
@@ -211,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
+				C50DC3D41E5E1E0E0049FCA6 /* TaskViewController.m in Sources */,
 				9F1E54D31E57858100F18320 /* DateCollectionViewCell.m in Sources */,
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				9FCE43751E16D12B0021BF9B /* SignUpViewController.m in Sources */,
