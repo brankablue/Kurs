@@ -18,6 +18,7 @@
 		C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C445CC8D1E01BDD7005A0825 /* LaunchScreen.storyboard */; };
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
 		C50DC3D41E5E1E0E0049FCA6 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */; };
+		C50DC3D71E60B4000049FCA6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3D61E60B4000049FCA6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,9 @@
 		C445CC971E01CA84005A0825 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C50DC3D21E5E1E0E0049FCA6 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
 		C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		C50DC3D61E60B4000049FCA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C50DC3D81E60B71F0049FCA6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C50DC3D91E60B86D0049FCA6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3D71E60B4000049FCA6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 		9F1E54CE1E5784AE00F18320 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3D81E60B71F0049FCA6 /* Constants.h */,
 				9F1E54C51E54CAE100F18320 /* Helpers.h */,
 				9F1E54C61E54CAE100F18320 /* Helpers.m */,
 			);
@@ -110,6 +116,7 @@
 			children = (
 				C445CC7E1E01BDD7005A0825 /* ToDo */,
 				C445CC7D1E01BDD7005A0825 /* Products */,
+				C50DC3D51E60B4000049FCA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,8 +147,17 @@
 				C445CC8B1E01BDD7005A0825 /* Assets.xcassets */,
 				C445CC901E01BDD7005A0825 /* Info.plist */,
 				C445CC801E01BDD7005A0825 /* main.m */,
+				C50DC3D91E60B86D0049FCA6 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C50DC3D51E60B4000049FCA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C50DC3D61E60B4000049FCA6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +192,11 @@
 					C445CC7B1E01BDD7005A0825 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -340,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $PROJECT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.sistemi.ToDo;
@@ -351,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = $PROJECT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = ToDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rs.sistemi.ToDo;
