@@ -19,6 +19,9 @@
 		C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445CC971E01CA84005A0825 /* LoginViewController.m */; };
 		C50DC3D41E5E1E0E0049FCA6 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3D31E5E1E0E0049FCA6 /* TaskViewController.m */; };
 		C50DC3D71E60B4000049FCA6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3D61E60B4000049FCA6 /* MapKit.framework */; };
+		C50DC3DB1E617A980049FCA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3DA1E617A980049FCA6 /* CoreLocation.framework */; };
+		C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3DD1E6183080049FCA6 /* DataManager.m */; };
+		C50DC3E01E618B1C0049FCA6 /* Sistemi, Serbia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,10 @@
 		C50DC3D61E60B4000049FCA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C50DC3D81E60B71F0049FCA6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		C50DC3D91E60B86D0049FCA6 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C50DC3DA1E617A980049FCA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C50DC3DC1E6183080049FCA6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		C50DC3DD1E6183080049FCA6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sistemi, Serbia.gpx"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3DB1E617A980049FCA6 /* CoreLocation.framework in Frameworks */,
 				C50DC3D71E60B4000049FCA6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +97,8 @@
 				C50DC3D81E60B71F0049FCA6 /* Constants.h */,
 				9F1E54C51E54CAE100F18320 /* Helpers.h */,
 				9F1E54C61E54CAE100F18320 /* Helpers.m */,
+				C50DC3DC1E6183080049FCA6 /* DataManager.h */,
+				C50DC3DD1E6183080049FCA6 /* DataManager.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 				C445CC901E01BDD7005A0825 /* Info.plist */,
 				C445CC801E01BDD7005A0825 /* main.m */,
 				C50DC3D91E60B86D0049FCA6 /* PrefixHeader.pch */,
+				C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 		C50DC3D51E60B4000049FCA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3DA1E617A980049FCA6 /* CoreLocation.framework */,
 				C50DC3D61E60B4000049FCA6 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -223,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3E01E618B1C0049FCA6 /* Sistemi, Serbia.gpx in Resources */,
 				C445CC8F1E01BDD7005A0825 /* LaunchScreen.storyboard in Resources */,
 				C445CC8C1E01BDD7005A0825 /* Assets.xcassets in Resources */,
 				C445CC8A1E01BDD7005A0825 /* Main.storyboard in Resources */,
@@ -243,6 +256,7 @@
 				9FCE43751E16D12B0021BF9B /* SignUpViewController.m in Sources */,
 				9F1E54C71E54CAE100F18320 /* Helpers.m in Sources */,
 				9F1E54C41E4F0FC300F18320 /* HomeViewController.m in Sources */,
+				C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
