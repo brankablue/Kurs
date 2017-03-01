@@ -181,6 +181,7 @@
                         <outlet property="textFieldsContainerViewBottomConstraint" destination="5Eg-jK-8fg" id="JQQ-Vn-QpU"/>
                         <outlet property="usernameImageView" destination="9EY-Gg-xQR" id="3xz-Wg-53G"/>
                         <outlet property="usernameTextField" destination="pfZ-go-ip1" id="9iq-lS-EY0"/>
+                        <segue destination="F7b-bG-8zW" kind="show" id="PJw-5h-gnH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -425,6 +426,7 @@
                         <outlet property="passwordTextField" destination="ok8-wT-UyS" id="on2-v3-cU7"/>
                         <outlet property="usernameImageView" destination="6PI-dG-vrO" id="Q5N-kg-HYu"/>
                         <outlet property="usernameTextField" destination="6SY-PU-8Fd" id="f1m-xd-NxC"/>
+                        <segue destination="F7b-bG-8zW" kind="show" identifier="HomeSegue" id="z85-Pi-KLh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RW-EO-rwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -860,7 +862,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1909.5999999999999" y="32.833583208395808"/>
+            <point key="canvasLocation" x="708" y="758"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="0Mh-9B-8Yr">
@@ -1074,7 +1076,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5o-xK-kvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2660" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1434" y="758"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SNX-n5-OMW">
@@ -1121,4 +1123,7 @@
         <image name="user-profile" width="202" height="202"/>
         <image name="username" width="40" height="39"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="z85-Pi-KLh"/>
+    </inferredMetricsTieBreakers>
 </document>

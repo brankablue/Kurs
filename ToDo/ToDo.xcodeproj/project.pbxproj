@@ -22,6 +22,7 @@
 		C50DC3DB1E617A980049FCA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3DA1E617A980049FCA6 /* CoreLocation.framework */; };
 		C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3DD1E6183080049FCA6 /* DataManager.m */; };
 		C50DC3E01E618B1C0049FCA6 /* Sistemi, Serbia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */; };
+		C50DC3E41E674D5A0049FCA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3E31E674D5A0049FCA6 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		C50DC3DC1E6183080049FCA6 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		C50DC3DD1E6183080049FCA6 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sistemi, Serbia.gpx"; sourceTree = SOURCE_ROOT; };
+		C50DC3E21E674D5A0049FCA6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		C50DC3E31E674D5A0049FCA6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,7 @@
 		C445CC7E1E01BDD7005A0825 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3E11E674D0C0049FCA6 /* Models */,
 				9F1E54D01E57853F00F18320 /* Cells */,
 				9F1E54CD1E57848900F18320 /* View Controlers */,
 				9F1E54CE1E5784AE00F18320 /* Utilities */,
@@ -170,6 +174,15 @@
 				C50DC3D61E60B4000049FCA6 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C50DC3E11E674D0C0049FCA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C50DC3E21E674D5A0049FCA6 /* User.h */,
+				C50DC3E31E674D5A0049FCA6 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3E41E674D5A0049FCA6 /* User.m in Sources */,
 				C445CC841E01BDD7005A0825 /* AppDelegate.m in Sources */,
 				C50DC3D41E5E1E0E0049FCA6 /* TaskViewController.m in Sources */,
 				9F1E54D31E57858100F18320 /* DateCollectionViewCell.m in Sources */,

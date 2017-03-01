@@ -9,7 +9,7 @@
 #import "TaskViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface TaskViewController () <UITextFieldDelegate>
+@interface TaskViewController () <UITextFieldDelegate, DataManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *locationTextField;
@@ -57,12 +57,41 @@
      }
 }
 
+#pragma  mark - View lifecycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.locationTextField.text = [DataManager sharedManager].userLocality;
+
+    
+    //Via delegate
+    DataManager *dataManager = [DataManager sharedManager];
+    dataManager.delegate = self;
+    
+    //Via notification
+    [[NSNotificationCenter defaultCenter] addObserverForName:LOCALITY_UPDATED_NOTIFICATION object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        self.locationTextField.text = [DataManager sharedManager].userLocality;
+    }];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
     return YES;
+}
+
+#pragma  mark - DataManagerDelegate
+
+-(void)dataManagerDidUpdateLocality {
+    self.locationTextField.text = [DataManager sharedManager].userLocality;
 }
 
 @end

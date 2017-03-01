@@ -36,6 +36,18 @@
     }];
 }
 
+-(void)setUserLocality:(NSString *)userLocality {
+    _userLocality = userLocality;
+    
+    // Via delegate
+    if (self.delegate) {
+        [self.delegate dataManagerDidUpdateLocality];
+    }
+    
+    //Via notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:userLocality object:nil];
+}
+
 #pragma  marka - Designated Initializer
 
 +(instancetype)sharedManager {
