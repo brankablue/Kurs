@@ -748,10 +748,10 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqX-mH-f1e">
-                                                    <rect key="frame" x="23" y="14" width="40" height="40"/>
+                                                    <rect key="frame" x="3" y="14" width="0.0" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="RFr-Ix-5U2"/>
-                                                        <constraint firstAttribute="width" constant="40" id="pK4-O3-dsV"/>
+                                                        <constraint firstAttribute="width" id="pK4-O3-dsV"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -759,9 +759,14 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-Rg-CrF" userLabel="Description">
-                                                    <rect key="frame" x="71" y="33" width="304" height="16.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9R-bF-RPH" userLabel="Description">
+                                                    <rect key="frame" x="11" y="8" width="364" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <color key="textColor" red="0.16894025259067358" green="0.16894025259067358" blue="0.16894025259067358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-Rg-CrF" userLabel="Description">
+                                                    <rect key="frame" x="11" y="37" width="364" height="17"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -771,8 +776,14 @@
                                                 <constraint firstAttribute="bottom" secondItem="HKb-kp-DSd" secondAttribute="bottom" id="0ep-GZ-TDz"/>
                                                 <constraint firstItem="HKb-kp-DSd" firstAttribute="top" secondItem="Pbm-C5-U4z" secondAttribute="top" id="GoN-Jk-xfx"/>
                                                 <constraint firstItem="nqX-mH-f1e" firstAttribute="centerY" secondItem="Pbm-C5-U4z" secondAttribute="centerY" id="IvZ-hP-SJ8"/>
+                                                <constraint firstItem="Rao-Rg-CrF" firstAttribute="top" secondItem="U9R-bF-RPH" secondAttribute="bottom" constant="8" id="MAK-mZ-6Hb"/>
+                                                <constraint firstItem="U9R-bF-RPH" firstAttribute="top" secondItem="Pbm-C5-U4z" secondAttribute="top" constant="8" id="VUf-P8-QAb"/>
+                                                <constraint firstItem="U9R-bF-RPH" firstAttribute="leading" secondItem="nqX-mH-f1e" secondAttribute="trailing" constant="8" id="a6y-43-TL4"/>
+                                                <constraint firstItem="Rao-Rg-CrF" firstAttribute="trailing" secondItem="U9R-bF-RPH" secondAttribute="trailing" id="bUb-72-yRI"/>
+                                                <constraint firstAttribute="trailing" secondItem="U9R-bF-RPH" secondAttribute="trailing" id="duk-kt-8U7"/>
+                                                <constraint firstItem="Rao-Rg-CrF" firstAttribute="leading" secondItem="U9R-bF-RPH" secondAttribute="leading" id="ihQ-aP-hma"/>
                                                 <constraint firstItem="HKb-kp-DSd" firstAttribute="leading" secondItem="Pbm-C5-U4z" secondAttribute="leading" id="qjv-Hw-fEx"/>
-                                                <constraint firstItem="nqX-mH-f1e" firstAttribute="leading" secondItem="HKb-kp-DSd" secondAttribute="trailing" constant="20" id="w6q-cG-ZSg"/>
+                                                <constraint firstItem="nqX-mH-f1e" firstAttribute="leading" secondItem="HKb-kp-DSd" secondAttribute="trailing" id="w6q-cG-ZSg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -862,7 +873,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="708" y="758"/>
+            <point key="canvasLocation" x="708" y="757.87106446776613"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="0Mh-9B-8Yr">

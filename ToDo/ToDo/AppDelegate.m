@@ -17,6 +17,36 @@
 
 @implementation AppDelegate
 
+#pragma mark - Properties
+
+@synthesize persistentContainer = _persistentContainer;
+
+- (NSPersistentContainer *)persistentContainer {
+    @synchronized (self) {
+        if (!_persistentContainer) {
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"ToDo"];
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * storeDescription, NSError * error) {
+                if (error) {
+                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                    abort();
+                }
+            }];
+        }
+    }
+    return  _persistentContainer;
+}
+
+#pragma mark - Public API
+
+-(void)saveContext {
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    NSError *error = nil;
+    if ([context hasChanges] && ![context save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+        abort();
+    }
+}
+
 #pragma mark - Private API
 
 - (void)configureLocationManager {
@@ -46,6 +76,9 @@
     }
     
     return YES;
+}
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [self saveContext];
 }
 
 #pragma mark - CLLocationManagerDelegate

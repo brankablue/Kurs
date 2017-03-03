@@ -23,6 +23,9 @@
 		C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3DD1E6183080049FCA6 /* DataManager.m */; };
 		C50DC3E01E618B1C0049FCA6 /* Sistemi, Serbia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */; };
 		C50DC3E41E674D5A0049FCA6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3E31E674D5A0049FCA6 /* User.m */; };
+		C50DC3E71E69E5840049FCA6 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3E51E69E5840049FCA6 /* ToDo.xcdatamodeld */; };
+		C50DC3EF1E69EF4D0049FCA6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */; };
+		C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,10 @@
 		C50DC3DF1E618B1C0049FCA6 /* Sistemi, Serbia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Sistemi, Serbia.gpx"; sourceTree = SOURCE_ROOT; };
 		C50DC3E21E674D5A0049FCA6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		C50DC3E31E674D5A0049FCA6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		C50DC3E61E69E5840049FCA6 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
+		C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C50DC3F01E69F9190049FCA6 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50DC3EF1E69EF4D0049FCA6 /* CoreData.framework in Frameworks */,
 				C50DC3DB1E617A980049FCA6 /* CoreLocation.framework in Frameworks */,
 				C50DC3D71E60B4000049FCA6 /* MapKit.framework in Frameworks */,
 			);
@@ -120,6 +128,8 @@
 			children = (
 				9F1E54D11E57858100F18320 /* DateCollectionViewCell.h */,
 				9F1E54D21E57858100F18320 /* DateCollectionViewCell.m */,
+				C50DC3F01E69F9190049FCA6 /* TaskTableViewCell.h */,
+				C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 		C50DC3D51E60B4000049FCA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */,
 				C50DC3DA1E617A980049FCA6 /* CoreLocation.framework */,
 				C50DC3D61E60B4000049FCA6 /* MapKit.framework */,
 			);
@@ -179,6 +190,7 @@
 		C50DC3E11E674D0C0049FCA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C50DC3E51E69E5840049FCA6 /* ToDo.xcdatamodeld */,
 				C50DC3E21E674D5A0049FCA6 /* User.h */,
 				C50DC3E31E674D5A0049FCA6 /* User.m */,
 			);
@@ -271,6 +283,8 @@
 				9F1E54C71E54CAE100F18320 /* Helpers.m in Sources */,
 				9F1E54C41E4F0FC300F18320 /* HomeViewController.m in Sources */,
 				C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */,
+				C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */,
+				C50DC3E71E69E5840049FCA6 /* ToDo.xcdatamodeld in Sources */,
 				C445CC981E01CA84005A0825 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C50DC3E51E69E5840049FCA6 /* ToDo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C50DC3E61E69E5840049FCA6 /* ToDo.xcdatamodel */,
+			);
+			currentVersion = C50DC3E61E69E5840049FCA6 /* ToDo.xcdatamodel */;
+			path = ToDo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C445CC741E01BDD7005A0825 /* Project object */;
 }
