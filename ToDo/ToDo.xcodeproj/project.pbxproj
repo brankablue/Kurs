@@ -26,6 +26,7 @@
 		C50DC3E71E69E5840049FCA6 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3E51E69E5840049FCA6 /* ToDo.xcdatamodeld */; };
 		C50DC3EF1E69EF4D0049FCA6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */; };
 		C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */; };
+		C50DC3F51E6AB1A00049FCA6 /* DBTask+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3F41E6AB1A00049FCA6 /* DBTask+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C50DC3F01E69F9190049FCA6 /* TaskTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		C50DC3F31E6AB19F0049FCA6 /* DBTask+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBTask+Utilities.h"; sourceTree = "<group>"; };
+		C50DC3F41E6AB1A00049FCA6 /* DBTask+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTask+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				C50DC3E51E69E5840049FCA6 /* ToDo.xcdatamodeld */,
 				C50DC3E21E674D5A0049FCA6 /* User.h */,
 				C50DC3E31E674D5A0049FCA6 /* User.m */,
+				C50DC3F31E6AB19F0049FCA6 /* DBTask+Utilities.h */,
+				C50DC3F41E6AB1A00049FCA6 /* DBTask+Utilities.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				C445CC811E01BDD7005A0825 /* main.m in Sources */,
 				9FCE43751E16D12B0021BF9B /* SignUpViewController.m in Sources */,
 				9F1E54C71E54CAE100F18320 /* Helpers.m in Sources */,
+				C50DC3F51E6AB1A00049FCA6 /* DBTask+Utilities.m in Sources */,
 				9F1E54C41E4F0FC300F18320 /* HomeViewController.m in Sources */,
 				C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */,
 				C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */,
