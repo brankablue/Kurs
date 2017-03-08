@@ -18,5 +18,6 @@
 #import "DBTask+CoreDataClass.h"
 #import "DBTask+Utilities.h"
 #import "DBTask+Utilities.m"
+#import "UIViewController+Utilities.h"
 
 #endif /* PrefixHeader_pch */

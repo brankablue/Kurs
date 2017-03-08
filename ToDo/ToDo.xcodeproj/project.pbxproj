@@ -27,6 +27,7 @@
 		C50DC3EF1E69EF4D0049FCA6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50DC3EE1E69EF4D0049FCA6 /* CoreData.framework */; };
 		C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */; };
 		C50DC3F51E6AB1A00049FCA6 /* DBTask+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C50DC3F41E6AB1A00049FCA6 /* DBTask+Utilities.m */; };
+		C53C9BD01E70917B00F728A7 /* UIViewController+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C53C9BCF1E70917B00F728A7 /* UIViewController+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		C50DC3F11E69F9190049FCA6 /* TaskTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		C50DC3F31E6AB19F0049FCA6 /* DBTask+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBTask+Utilities.h"; sourceTree = "<group>"; };
 		C50DC3F41E6AB1A00049FCA6 /* DBTask+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBTask+Utilities.m"; sourceTree = "<group>"; };
+		C53C9BCE1E70917B00F728A7 /* UIViewController+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utilities.h"; sourceTree = "<group>"; };
+		C53C9BCF1E70917B00F728A7 /* UIViewController+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				9F1E54C61E54CAE100F18320 /* Helpers.m */,
 				C50DC3DC1E6183080049FCA6 /* DataManager.h */,
 				C50DC3DD1E6183080049FCA6 /* DataManager.m */,
+				C53C9BCE1E70917B00F728A7 /* UIViewController+Utilities.h */,
+				C53C9BCF1E70917B00F728A7 /* UIViewController+Utilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				9F1E54C71E54CAE100F18320 /* Helpers.m in Sources */,
 				C50DC3F51E6AB1A00049FCA6 /* DBTask+Utilities.m in Sources */,
 				9F1E54C41E4F0FC300F18320 /* HomeViewController.m in Sources */,
+				C53C9BD01E70917B00F728A7 /* UIViewController+Utilities.m in Sources */,
 				C50DC3DE1E6183080049FCA6 /* DataManager.m in Sources */,
 				C50DC3F21E69F9190049FCA6 /* TaskTableViewCell.m in Sources */,
 				C50DC3E71E69E5840049FCA6 /* ToDo.xcdatamodeld in Sources */,

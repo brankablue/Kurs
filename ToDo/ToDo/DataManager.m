@@ -79,38 +79,62 @@
 
 #pragma mark - PUblic API
 
-- (NSMutableArray *)fetchEntity:(NSString *)entityName
+- (NSArray *)fetchEntity:(NSString *)entityName
                      withFilter:(NSString *)filter
                     withSortAsc:(BOOL)sortAscending
                          forKey:(NSString *)sortKey {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entityDescription];
     
+    // Sorting
+    if (sortKey) {
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:sortAscending];
+        [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    }
+    
+    // Filtering
+    if (filter) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:filter];
+        [fetchRequest setPredicate:predicate];
+    }
+    
+    //Execute fetch request
+    
+    NSError *error;
+    NSArray *resultsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Error fetching %@(s).", error.localizedDescription);
+    }
+    
+    return resultsArray;
 }
 
 - (void)deleteObject:(NSManagedObject *)object {
     [self.managedObjectContext deleteObject:object];
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    
-    if ([appDelegate respondsToSelector:@selector(saveContext)]) {
-         [appDelegate saveContext];
-    }
-   
+    [self.managedObjectContext save:nil];
 }
 
 - (void)updateObject:(NSManagedObject *)object {
-    NSError *error = nil;
-    if ([object.managedObjectContext hasChanges]) && ![object._managedObjectContext save:&error]) {
-        NSLog(@"Error updating object in database: %@, %@", error.localizedDescription, error.userinfo);
-        abort();
-    }
+    [object.managedObjectContext save:nil];
 }
 
 - (void)logObject:(NSManagedObject *)object {
+    NSEntityDescription *description = object.entity;
+    NSDictionary *attributes = [description attributesByName];
+    
+    for (NSString *attribute in attributes) {
+        NSLog(@"%@ = %@,", attribute, [object valueForKey:attribute]);
+    }
     
 }
 
 - (NSInteger)numberOfTaskPerTaskGroup:(TaskGroup *)group {
-    NSArray *taskArray = [self fetchEntity:NSStringFromClass([DBTask class])
-                                withFilter:[[NSString stringWithFormat:@"group = %ld", group]
+    NSString *filter = [NSString stringWithFormat:@"group = %ld", group];
+    
+    NSArray *taskArray = [self fetchEntity:NSStringFromClass(DBTask.class)
+                                withFilter:filter
                                withSortAsc:NO
                                     forKey:nil];
                           
@@ -121,7 +145,7 @@
 - (void)saveTaskWithTitle:(NSString *)title
               description:(NSString *)description
                     group:(NSInteger)group{
-                        DBTask *task = (DBTask *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(([DBTask class]) inManagedObjectContext:self.managedObjectContext];
+                        DBTask *task = (DBTask *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([DBTask class]) inManagedObjectContext:self.managedObjectContext];
                                                                                                                         
                     task.title = title;
                     task.desc = description;
@@ -130,7 +154,10 @@
                     task.longitude = self.userLocation.coordinate.longitude;
                         
 }
-                    task.date = [NSDate date];
+                   //Date
+                    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                    dateFormatter.dateFormat = DATE_FORMAT;
+                    task.date = [dateFormatter stringFromDate:[NSDate date]];
                     task.group = group;
                                                                                                                         
                     //Save
