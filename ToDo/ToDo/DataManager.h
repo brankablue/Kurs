@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSString *userLocality;
 @property (weak, nonatomic) id<DataManagerDelegate> delegate;
 + (instancetype)sharedManager;
-- (NSArray *)fetchEntity:(NSString *)entityName
+- (NSMutableArray *)fetchEntity:(NSString *)entityName
                      withFilter:(NSString *)filter
                     withSortAsc:(BOOL)sortAscending
                          forKey:(NSString *)sortKey;

@@ -12,4 +12,6 @@
 
 @property(strong, nonatomic) NSString *title;
 @property(strong, nonatomic) NSString *url;
+
+- (instancetype)initWithTitle:(NSString *)title andURL:(NSString *)url;
 @end

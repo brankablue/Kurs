@@ -69,22 +69,60 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RUr-H1-7WD"/>
                                 </connections>
                             </webView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-T7-55j" userLabel="Close Button">
+                                <rect key="frame" x="316" y="573" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                            </button>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HC4-JV-269">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="u15-jZ-YpW" style="IBUITableViewCellStyleDefault" id="igu-Ru-bus">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="igu-Ru-bus" id="Nll-J1-fEc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u15-jZ-YpW">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="rsg-6O-zAT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="dvZ-so-oCV"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HC4-JV-269" secondAttribute="trailing" id="1ue-pG-Td9"/>
+                            <constraint firstItem="HC4-JV-269" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7bx-IP-xUc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="psP-Bw-Js9" secondAttribute="bottom" id="ElX-XF-GCu"/>
                             <constraint firstItem="96r-oC-1MR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="NP5-IY-tG2"/>
                             <constraint firstItem="psP-Bw-Js9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PE5-k5-ayw"/>
                             <constraint firstItem="psP-Bw-Js9" firstAttribute="top" secondItem="6C1-gO-MHw" secondAttribute="bottom" id="PKH-H5-aZf"/>
+                            <constraint firstItem="HC4-JV-269" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Quf-GR-K1P"/>
                             <constraint firstItem="96r-oC-1MR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RdX-83-MFB"/>
                             <constraint firstItem="6C1-gO-MHw" firstAttribute="top" secondItem="96r-oC-1MR" secondAttribute="bottom" constant="8" id="Yqa-dq-6bj"/>
                             <constraint firstAttribute="trailing" secondItem="6C1-gO-MHw" secondAttribute="trailing" id="aFb-Dy-4cj"/>
+                            <constraint firstItem="psP-Bw-Js9" firstAttribute="top" secondItem="gGN-T7-55j" secondAttribute="bottom" constant="20" id="bUu-qs-dz1"/>
+                            <constraint firstAttribute="trailing" secondItem="gGN-T7-55j" secondAttribute="trailing" constant="20" id="ivh-ar-lnQ"/>
                             <constraint firstAttribute="trailing" secondItem="96r-oC-1MR" secondAttribute="trailing" constant="8" id="vAQ-WM-V97"/>
                             <constraint firstAttribute="trailing" secondItem="psP-Bw-Js9" secondAttribute="trailing" id="vCF-eW-5do"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HC4-JV-269" secondAttribute="bottom" id="xsI-Yh-MaD"/>
                             <constraint firstItem="6C1-gO-MHw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zcA-P6-qWd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="HC4-JV-269" id="zGW-xc-g8V"/>
                         <outlet property="urlTextField" destination="96r-oC-1MR" id="HdX-No-CKr"/>
                         <outlet property="webView" destination="6C1-gO-MHw" id="YFK-c6-pco"/>
                     </connections>

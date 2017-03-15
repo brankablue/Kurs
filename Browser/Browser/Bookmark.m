@@ -10,5 +10,15 @@
 
 @implementation Bookmark
 
+#pragma mark - Designated Initilizer
+
+- (instancetype)initWithTitle:(NSString *)title andURL:(NSString *)url {
+    if (self = [super init]) {
+        self.title = title;
+        self.url = url;
+    }
+    
+    return self;
+}
 
 @end
